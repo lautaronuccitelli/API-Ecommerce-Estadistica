@@ -14,11 +14,5 @@ public class ClientesController : ControllerBase
     [HttpGet]
     public IActionResult Get() => Ok(_context.Clientes.ToList());
 
-    [HttpPost]
-    public IActionResult Post(Cliente c)
-    {
-        _context.Clientes.Add(c);
-        _context.SaveChanges();
-        return Ok(c);
-    }
+
 }

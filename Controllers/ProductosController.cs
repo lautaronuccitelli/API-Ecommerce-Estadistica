@@ -14,11 +14,5 @@ public class ProductosController : ControllerBase
     [HttpGet]
     public IActionResult Get() => Ok(_context.Productos.ToList());
 
-    [HttpPost]
-    public IActionResult Post(Producto p)
-    {
-        _context.Productos.Add(p);
-        _context.SaveChanges();
-        return Ok(p);
-    }
+
 }
